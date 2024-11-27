@@ -1,0 +1,13 @@
+.
+├── cli.js
+├── LICENSE
+├── package.json
+├── package-lock.json
+├── plopfile.js
+├── README.md
+├── structure.txt
+└── templates
+    ├── Controller.js.hbs
+    └── Routes.js.hbs
+
+1 directory, 9 files
