@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "backend cli",
   "main": "cli.js",
+  "type": "module",
   "bin": {
     "backend-api-cli": "./cli.js"
   },
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "backend-api-cli": "^1.0.0",
+    "commander": "^12.1.0",
     "express": "^4.21.1"
   }
 }

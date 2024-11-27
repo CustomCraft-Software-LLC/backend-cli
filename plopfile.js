@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 module.exports = function (plop) {
     plop.setGenerator('API Module', {
         description: 'Generate a new Express.js API module (controller and routes)',
@@ -9,6 +12,20 @@ module.exports = function (plop) {
             },
         ],
         actions: [
+            {
+                type: 'custom',
+                name: 'ensureDirs',
+                action: () => {
+                    const dirs = ['backend/controllers', 'backend/routes'];
+                    dirs.forEach((dir) => {
+                        if (!fs.existsSync(dir)) {
+                            fs.mkdirSync(dir, { recursive: true });
+                            console.log(`Created directory: ${dir}`);
+                        }
+                    });
+                    return 'Checked and ensured directories exist.';
+                },
+            },
             {
                 type: 'add',
                 path: 'backend/controllers/{{camelCase name}}Controller.js',
