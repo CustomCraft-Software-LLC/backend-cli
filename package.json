@@ -1,11 +1,11 @@
 {
-  "name": "backend-api-cli",
+  "name": "ccs-backend-cli",
   "version": "1.0.0",
   "description": "backend cli",
   "main": "cli.js",
   "type": "module",
   "bin": {
-    "backend-api-cli": "./cli.js"
+    "ccs-backend-cli": "./cli.js"
   },
   "scripts": {
     "start": "node cli.js"
@@ -20,11 +20,10 @@
   "author": "Your Name",
   "license": "ISC",
   "devDependencies": {
+    "commander": "^12.1.0",
     "plop": "^4.0.1"
   },
   "dependencies": {
-    "backend-api-cli": "^1.0.0",
-    "commander": "^12.1.0",
     "express": "^4.21.1"
   }
 }
