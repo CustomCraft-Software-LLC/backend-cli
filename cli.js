@@ -7,7 +7,7 @@ const program = new Command();
 program
   .name('ccs-backend-cli')
   .description('CLI tool for generating backend API modules')
-  .version('1.0.2', '-v, --version', 'Output the current version');
+  .version('1.0.6', '-v, --version', 'Output the current version');
 
 program
   .command('generate <name>')
@@ -31,11 +31,8 @@ program
     }
   });
 
-program.
-  helpOption('-h, --help', 'Display help for command');
-
 program.parse(process.argv);
 
-if (!process.argv.slice(2).length) {
+if (process.argv.length < 3) {
   program.outputHelp();
 }
