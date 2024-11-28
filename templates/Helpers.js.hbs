@@ -1,0 +1,20 @@
+const formatData = (data) => {
+    return data;
+};
+
+const validateData = (data, fields) => {
+    fields.forEach(field => {
+        if (!data[field]) {
+            throw new Error(`${field} is required`);
+        }
+    });
+    return true;
+};
+
+const handleError = (error) => {
+    return {
+        message: error.message || 'Something went wrong'
+    };
+};
+
+module.exports = { formatData, validateData, handleError };

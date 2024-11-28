@@ -1,0 +1,17 @@
+const getProductService = async (data) => {
+    return data || [];
+};
+
+const createProductService = async (data) => {
+    return { ...data, id: Date.now() };
+};
+
+const updateProductService = async (id, data) => {
+    return { ...data, id };
+};
+
+const deleteProductService = async (id) => {
+    return { id, deleted: true };
+};
+
+export { getProductService, createProductService, updateProductService, deleteProductService };
