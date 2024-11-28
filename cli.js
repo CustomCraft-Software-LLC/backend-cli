@@ -31,15 +31,8 @@ program
     }
   });
 
-program
-  .helpCommand()
-  .addHelpText('after', `
-
-Examples:
-  $ ccs-backend-cli generate User --services --helpers
-  $ ccs-backend-cli generate Product --helpers
-  $ ccs-backend-cli generate Order
-`);
+program.
+  helpOption('-h, --help', 'Display help for command');
 
 program.parse(process.argv);
 
